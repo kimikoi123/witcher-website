@@ -1,0 +1,152 @@
+@import url(/css/fonts.css);
+@import url(/css/normalize.css);
+
+:root {
+    --white-color: #ffffff;
+    --red-color: #EF4036;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--white-color);
+    font-family: Open Sans;
+    font-weight: 500;
+}
+
+header {
+    height: 100vh;
+}
+
+/*TOP BAR CONTAINER*/
+
+.top-nav-bar-container {
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(56,77,94,1) 0%, rgba(22,28,43,1) 100%);
+}
+
+.top-nav-bar-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .8rem;
+}
+
+.contact-information-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-information-container  i {
+    border: 1px solid var(--red-color);
+    padding: .5rem;
+    border-radius: 50%;
+    color: var(--red-color);
+    margin-right: 5px;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.signup-container a {
+    text-decoration: none;
+    color: inherit;
+    justify-content: center;
+}
+
+.signup-container > button {
+    border: none;
+    background-color: var(--red-color);
+    padding: .8rem;
+    color: var(--white-color);
+    cursor: pointer;
+    transition: transform .25s ease-in-out;
+}
+
+.signup-container > button:hover {
+    transform: scale(1.4);
+}
+
+.signup-container  i {
+    font-size: 1.1rem;
+}
+
+/* HEADER-BACKGROUND-SLIDE*/
+.header-background-container {
+    height: 100%;
+}
+
+.header-background-slide-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.slider-container {
+    height: 100%;
+    width: 500%;
+    display: flex;
+}
+
+.header-background-slide-container input[type="radio"] {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.radio-slide-label-container {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+}
+
+.manual-btn {
+    width: 50px;
+    height: 5px;
+    border-radius: 1000000px;
+    background-color: rgba(255,255,255,.4);
+    cursor: pointer;
+}
+
+.manual-btn:hover {
+    background-color: rgba(255,255,255,.9);
+}
+
+
+
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
